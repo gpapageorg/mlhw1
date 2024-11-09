@@ -1,5 +1,5 @@
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class Bayes:
     def __init__(self, size) -> None:
@@ -75,7 +75,7 @@ class Bayes:
         return fails / self.size
 
 if __name__ == "__main__":
-    size = int(1E6) # How many pairs i want
+    size = int(1000000) # How many pairs i want
 
     b = Bayes(size)
 
@@ -83,9 +83,8 @@ if __name__ == "__main__":
     x_H0 = b.generateH0Pairs()
     x_H1 = b.generateH1Pairs()
     
-    #Testing
-
     e1 = b.testUnderH0(x_H0)
+
 
     e2 = b.testUnderH1(x_H1)
 
