@@ -82,6 +82,7 @@ if __name__ == "__main__":
     #Generating Random Pairs
     x_H0 = b.generateH0Pairs()
     x_H1 = b.generateH1Pairs()
+    print(x_H0[0], x_H1[0])
     
     e1 = b.testUnderH0(x_H0)
 
